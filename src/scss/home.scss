@@ -6,7 +6,8 @@
 
 body{
     @include Popins;
-    width: 100%;
+    position: relative;
+    height: 999px;
 
     @include sm-d{
         background-color: red;
@@ -21,4 +22,5 @@ body{
     margin:0px 0px 0px 0px;
 
 }
+
 @import "./module/header";
