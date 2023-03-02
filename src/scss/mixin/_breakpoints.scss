@@ -1,0 +1,51 @@
+@mixin sm-u{
+    @media (min-width: map-get($breakpoitns, sm)) {
+        @content;
+    }
+}
+@mixin md-u{
+    @media (min-width: map-get($breakpoitns, md)) {
+        @content;
+    }
+}
+@mixin lg-u{
+    @media (min-width: map-get($breakpoitns, lg)) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: (map-get($breakpoitns, md) - .2px)) and (min-width:map-get($breakpoitns,sm)) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: (map-get($breakpoitns, md) - .2px)) and (min-width:map-get($breakpoitns,md)) {
+        @content;
+    }
+}
+@mixin lg {
+    @media (max-width: (map-get($breakpoitns, md) - .2px)) and (min-width:map-get($breakpoitns,lg)) {
+        @content;
+    }
+}
+@mixin xl {
+    @media (min-width:map-get($breakpoitns,lg)) {
+        @content;
+    }
+}
+@mixin lg-d{
+    @media (max-width: (map-get($breakpoitns, xl) - .2px)){
+        @content;
+    }
+}
+@mixin md-d{
+    @media (max-width: (map-get($breakpoitns, lg) - .2px)){
+        @content;
+    }
+}
+@mixin sm-d{
+    @media (max-width: (map-get($breakpoitns, md) - .2px)){
+        @content;
+    }
+}

@@ -1,0 +1,24 @@
+
+@import "./mixin/vars";
+@import "./mixin/breakpoints";
+@import "./mixin/font";
+
+
+body{
+    @include Popins;
+    width: 100%;
+
+    @include sm-d{
+        background-color: red;
+    }
+
+    @include md-u{
+        background-color: yellow;
+    }
+    @include lg-u{
+        background-color: green;
+    }
+    margin:0px 0px 0px 0px;
+
+}
+@import "./module/header";

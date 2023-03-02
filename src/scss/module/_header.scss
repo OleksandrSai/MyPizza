@@ -1,0 +1,98 @@
+@import "../mixin/font.scss";
+@import "../mixin/color.scss";
+@import "../mixin/vars";
+@import "../mixin/breakpoints";
+
+
+
+.header {
+
+    max-width: 1920px;
+    background-color: lighten($color, 8%);
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    @include sm-d{
+        justify-content: space-between;
+    }
+
+    .header__burger{
+        display: none;
+        @include sm-d{
+            display: block;
+            
+            .burger__menu{
+                list-style: none;
+
+                .burger__menu__link{
+
+                    a{
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .header__logo {
+        display: flex;
+        flex-direction: column;
+        color: lighten($color, 80%);
+        justify-content: center;
+        font-size: 11px;
+        @include sm-d{
+            margin-right: 20px;
+        }
+
+        .logo__title {
+            margin-left: 26px;
+            position: relative;
+            z-index: 1;
+            @include Josefin;
+            font-size: 30px;
+
+        }
+
+        .logo__title::before {
+            position: absolute;
+            background-image: url(../img/pizza1_orange.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 5;
+            width: 23px;
+            height: 23px;
+            bottom: 6px;
+            right: 74px;
+            z-index: 2;
+            content: "";
+        }
+
+        .logo__subtitle {
+            font-size: 13px;
+            @include Josefin;
+            color: $colorGold
+        }
+    }
+
+    .header__menu {
+        @include sm-d{
+            display: none;
+        }
+
+        .menu__items {
+            display: flex;
+            list-style: none;
+
+            .menu__items__link {
+                margin-right: 40px;
+
+                a {
+                    text-decoration: none;
+                    color: lighten($color, 80%);
+                    line-height: 40px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
