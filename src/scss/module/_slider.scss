@@ -1,0 +1,421 @@
+@import "../mixin/vars";
+@import "../mixin/breakpoints";
+@import "../mixin/font.scss";
+@import "../mixin/color.scss";
+
+
+.fromInput {
+    position: relative;
+    align-items: center;
+
+    .slider__input {
+        position: absolute !important;
+        bottom: 20px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        left: 50%;
+
+        @include sm-d {
+            left: 42.5%;
+        }
+
+        input[type='radio'],
+        label {
+            cursor: pointer;
+        }
+
+        input[type='radio'] {
+            position: relative;
+            height: 22px;
+            width: 22px;
+            appearance: none;
+            outline: none;
+        }
+
+        input[type='radio']::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lighten($color,60%);
+            border: 2px solid lighten($color,60%);
+        }
+
+        input[type='radio']:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: lighten($color, 70%);
+            outline: 5px solid rgba($color: #f7f5f5, $alpha: 1.0);
+            transform: translate(-50%, -50%);
+            visibility: visible;
+        }
+    }
+}
+
+
+.slider {
+
+    align-items: center;
+    justify-content: center;
+    max-height: 850px;
+    z-index: 1;
+
+    width: 300%;
+    overflow: hidden;
+    // animation-name: animate;
+    // animation-direction: alternate-reverse;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: step-end;
+    // animation-duration: 12s;
+
+
+    @include sm-d {
+        height: 705px;
+
+    }
+
+
+
+    // @keyframes animate {
+    //     15% {
+    //         margin-left: 0%;
+    //     }
+
+    //     50% {
+    //         margin-left: -100%;
+    //     }
+
+    //     85% {
+    //         margin-left: -200%;
+    //     }
+
+    // }
+
+    .slider__line {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 860px;
+
+        @include sm-d {
+            margin-top: -10px;
+
+        }
+
+        //первый слайд
+        .slide1 {
+            background-image: linear-gradient(rgba(31, 28, 17, 0.205), rgba(0, 0, 0, 0.8)), url(../img/bg_1.jpg);
+            width: 1920px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include sm-d {
+                width: 764px;
+            }
+
+            .slide__body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: -2px;
+
+                @include sm-d {
+                    margin-top: -230px;
+                }
+
+                .body__img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    order: 2;
+
+                    img {
+                        max-width: 500px;
+
+                        @include lg-d {
+                            width: 200px;
+                        }
+
+                        @include sm-d {
+                            width: 235px;
+                        }
+                    }
+                }
+
+                .body__title {
+                    color: lighten($color, 90%);
+                    order: 1;
+                    text-align: right;
+                    margin-right: 50px;
+
+                    @include sm-d {
+                        margin-right: 10px;
+                    }
+
+                    .title__first {
+                        @include NothingYou;
+                        font-size: 28px;
+                        color: $colorGold;
+
+                    }
+
+                    .title__second {
+                        @include Josefin;
+                        font-size: 32px;
+                        font-weight: 400;
+                        margin: 15px 0px 30px 0px;
+
+                    }
+
+                    .title__trid {
+                        max-width: 480px;
+                        margin-bottom: 15px;
+
+                    }
+
+                    .title__box {
+                        display: flex;
+                        justify-content: end;
+
+                        @include sm-d {
+                            margin-left: 30px;
+                        }
+
+                        .title__box__button__first {
+                            background-color: $colorGold;
+                            color: lighten($color, 15%);
+                            padding: 10px;
+                            margin-right: 8px;
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+
+                        .title__box__button__second {
+                            padding: 10px;
+                            border: 1px solid lighten($color, 80%);
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //второй слайд
+        .slide2 {
+            background-image: linear-gradient(rgba(31, 28, 17, 0.205), rgba(0, 0, 0, 0.8)), url(../img/bg_1.jpg);
+            width: 1920px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include sm-d {
+                width: 764px;
+            }
+
+            .slide__body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 75px;
+
+                @include sm-d {
+                    margin-top: -230px;
+                }
+
+                .body__img {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+
+                    @include sm-d {
+                        margin-left: 37px;
+                    }
+
+                    img {
+                        max-width: 500px;
+
+                        @include lg-d {
+                            width: 200px;
+                        }
+
+                        @include sm-d {
+                            margin-left: -35px;
+                            width: 225px;
+                        }
+
+
+                    }
+                }
+
+
+                .body__title {
+                    margin: -20px 0px 0px 50px;
+                    color: lighten($color, 90%);
+
+                    @include sm-d {
+                        margin-left: 25px;
+                    }
+
+                    .title__first {
+                        @include NothingYou;
+                        font-size: 28px;
+                        color: $colorGold;
+
+                    }
+
+                    .title__second {
+                        @include Josefin;
+                        font-size: 32px;
+                        font-weight: 400;
+                        margin: 15px 0px 30px 0px;
+
+                    }
+
+                    .title__trid {
+                        max-width: 480px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    .title__box {
+                        display: flex;
+                        justify-content: start;
+
+                        .title__box__button__first {
+                            background-color: $colorGold;
+                            color: lighten($color, 15%);
+                            padding: 10px;
+                            margin-right: 8px;
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+
+                        .title__box__button__second {
+                            padding: 10px;
+                            border: 1px solid lighten($color, 80%);
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //третий слайд
+        .slide3 {
+            background-image: linear-gradient(rgba(31, 28, 17, 0.205), rgba(0, 0, 0, 0.8)), url(../img/bg_3.jpg);
+            width: 1920px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include sm-d {
+                width: 764px;
+            }
+
+            .slide__body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include sm-d {
+                    margin-left: -30px;
+                    margin-top: -230px;
+                }
+
+                .body__title {
+
+                    color: lighten($color, 90%);
+
+                    .title__first {
+                        text-align: center;
+                        @include NothingYou;
+                        font-size: 28px;
+                        color: $colorGold;
+
+                    }
+
+                    .title__second {
+                        text-align: center;
+                        @include Josefin;
+                        font-size: 32px;
+                        font-weight: 400;
+                        margin: 15px 0px 30px 0px;
+                        max-width: 500px;
+
+                    }
+
+                    .title__trid {
+                        text-align: center;
+                        max-width: 480px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    .title__box {
+                        display: flex;
+                        justify-content: center;
+
+                        .title__box__button__first {
+                            background-color: $colorGold;
+                            color: lighten($color, 15%);
+                            padding: 10px;
+                            margin-right: 8px;
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+
+                        .title__box__button__second {
+                            padding: 10px;
+                            border: 1px solid lighten($color, 80%);
+                            cursor: pointer;
+
+                            @include sm-d {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

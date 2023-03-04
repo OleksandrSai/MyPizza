@@ -7,13 +7,12 @@
 body{
     @include Popins;
     position: relative;
-    height: 999px;
-
+    height: 150%;
     @include sm-d{
         background-color: red;
     }
 
-    @include md-u{
+    @include sm-u{
         background-color: yellow;
     }
     @include lg-u{
@@ -21,6 +20,30 @@ body{
     }
     margin:0px 0px 0px 0px;
 
-}
+
+.wrapper{
+        overflow: hidden;
+        max-width: 1920px;
+        height: 150%;
+        @include sm-d{
+            max-width: 764px;
+        }
+      
+
+        .main{
+            margin-top: 80px !important;
+            overflow: hidden;
+            margin-bottom: 100px;
+            
+        }
+      
+        
+     
+    
+    }}
+
+   
+
 
 @import "./module/header";
+@import "./module/slider"

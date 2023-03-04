@@ -49,3 +49,8 @@
         @content;
     }
 }
+@mixin mm-d{
+    @media (max-width: (map-get($breakpoitns, sm) - .2px)){
+        @content;
+    }
+}
