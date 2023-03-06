@@ -42,8 +42,8 @@
             height: 12px;
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            background-color: lighten($color,60%);
-            border: 2px solid lighten($color,60%);
+            background-color: lighten($color, 60%);
+            border: 2px solid lighten($color, 60%);
         }
 
         input[type='radio']:checked::after {
@@ -72,34 +72,11 @@
 
     width: 300%;
     overflow: hidden;
-    // animation-name: animate;
-    // animation-direction: alternate-reverse;
-    // animation-iteration-count: infinite;
-    // animation-timing-function: step-end;
-    // animation-duration: 12s;
-
 
     @include sm-d {
         height: 705px;
 
     }
-
-
-
-    // @keyframes animate {
-    //     15% {
-    //         margin-left: 0%;
-    //     }
-
-    //     50% {
-    //         margin-left: -100%;
-    //     }
-
-    //     85% {
-    //         margin-left: -200%;
-    //     }
-
-    // }
 
     .slider__line {
         display: flex;
@@ -134,7 +111,11 @@
                 margin-right: -2px;
 
                 @include sm-d {
-                    margin-top: -230px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 800px;
+
+
                 }
 
                 .body__img {
@@ -143,11 +124,17 @@
                     justify-content: start;
                     order: 2;
 
+                    @include sm-d {
+                        order: 1;
+
+                    }
+
+
                     img {
                         max-width: 500px;
 
                         @include lg-d {
-                            width: 200px;
+                            width: 300px;
                         }
 
                         @include sm-d {
@@ -163,7 +150,9 @@
                     margin-right: 50px;
 
                     @include sm-d {
-                        margin-right: 10px;
+                        order: 2;
+                        margin: 0px 0px 300px 0px;
+                        text-align: center
                     }
 
                     .title__first {
@@ -193,6 +182,7 @@
 
                         @include sm-d {
                             margin-left: 30px;
+                            justify-content: center;
                         }
 
                         .title__box__button__first {
@@ -244,7 +234,10 @@
                 margin-right: 75px;
 
                 @include sm-d {
-                    margin-top: -230px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 800px;
+                    margin: 0px;
                 }
 
                 .body__img {
@@ -253,7 +246,9 @@
                     justify-content: start;
 
                     @include sm-d {
-                        margin-left: 37px;
+                        margin: 0px;
+                        align-items: center;
+                        justify-content: center;
                     }
 
                     img {
@@ -278,7 +273,11 @@
                     color: lighten($color, 90%);
 
                     @include sm-d {
-                        margin-left: 25px;
+                        margin: 0px 0px 300px 0px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center
                     }
 
                     .title__first {
@@ -300,11 +299,20 @@
                         max-width: 480px;
                         margin-bottom: 30px;
 
+                        @include sm-d {
+                            width: 400px;
+                        }
+
+
                     }
 
                     .title__box {
                         display: flex;
                         justify-content: start;
+
+                        @include sm-d {
+                            justify-content: center;
+                        }
 
                         .title__box__button__first {
                             background-color: $colorGold;
@@ -353,13 +361,16 @@
                 align-items: center;
 
                 @include sm-d {
-                    margin-left: -30px;
-                    margin-top: -230px;
+                    height: 800px;
+
                 }
 
                 .body__title {
-
                     color: lighten($color, 90%);
+
+                    @include sm-d {
+                        margin-top: -200px;
+                    }
 
                     .title__first {
                         text-align: center;
