@@ -3,7 +3,6 @@
 @import "./mixin/breakpoints";
 @import "./mixin/font";
 
-
 body{
     @include Popins;
     position: relative;
@@ -28,17 +27,11 @@ body{
         @include sm-d{
             max-width: 764px;
         }
-      
-
         .main{
             margin-top: 80px !important;
             overflow: hidden;
             margin-bottom: 100px;
-            
         }
-      
-        
-     
     
     }}
 
@@ -46,4 +39,6 @@ body{
 
 
 @import "./module/header";
-@import "./module/slider"
+@import "./module/slider";
+@import "./module/home1";
+@import "./module/home2";
