@@ -1,40 +1,134 @@
-.home2{
+.home2 {
     background-image: url(../img/bg_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 860px;
-    .home2__items{
-    display: flex;
-    height: 85%;
-    .item__logo{
-        width: 30%;
-        background-image: url(../img/about.jpg);
-        background-position: -230px;
-        background-repeat: no-repeat;
-        background-size: cover;
+    @include lg-d{
+        height: 1200px;
+    
     }
-    .item__body{
-        margin-top: 3%;
+    
+    @include sm-d{
+        height: 1700px;
+    }
+
+    .home2__items {
         display: flex;
-        flex-direction: column;
-        .item__body__menu{
-            list-style: none;
-            color:white;
-            display: flex;
-            .item__body__links{
-                margin-right: 25px;
-                border: 1px solid lighten($colorGold, 25%);
-                height: 50px;
-                width: 90px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: lighten($colorGold, 25%);
-                font-weight: 400;
-            }
-            .item__body__links:nth-child(1){
-              background-color: darken($colorGold, 1%);
-              color: $color;
+        height: 85%;
+        @include lg-d{
+            height: 100%;
+        }
+
+        .item__logo {
+            width: 30%;
+            background-image: url(../img/about.jpg);
+            background-position: -230px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include lg-d{
+                display: none;
+                background-size: 100% 100%;
             }
         }
-    }
+
+        .item__body {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            justify-content: space-evenly;
+            @include lg-d{
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .item__body__menu {
+                list-style: none;
+                display: flex;
+                @include lg-d{
+                    margin-top: 50px;
+                    padding: 0px;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+
+                .item__body__links {
+                    margin-left: 25px;
+                    border: 1px solid lighten($colorGold, 25%);
+                    height: 50px;
+                    width: 90px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: lighten($colorGold, 25%);
+                    font-weight: 400;
+                    @include lg-d{
+                        margin: 15px;
+                        justify-content: space-around;
+                    }
+                }
+                .item__body__links:nth-child(1) {
+                    background-color: darken($colorGold, 1%);
+                    color: $color;
+                }
+            }
+            .item__body__items {
+                display: flex;
+                justify-content: space-evenly;
+                @include lg-d{
+                    flex-wrap: wrap;
+                }
+
+                .bodyItems {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 350px;
+                    height: 500px;
+                   
+                    .bodyItems__logo {
+                        border-radius: 50%;
+                        width: 250px;
+                        height: 250px;
+                        background-size: auto 250px;
+                        background-position: -60px;
+                        background-repeat: no-repeat;
+                    }
+
+                    .bodyItems__logo {
+                        background-image: url(../img/image_3.jpg);
+                    }
+                    .bodyItems__title{
+                        @include Josefin;
+                        font-size:21px;
+                        color: lighten($color, 100%);
+                    }
+                    .bodyItems__subtitle{
+                        text-align: center;
+                        color: lighten($color, 60%);
+                    }
+                    .bodyItems__cart{
+                        padding: 7px;
+                        color: lighten($color, 100%);
+                        border: lighten($color, 100%) 1px solid;
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+                .bodyItems:nth-child(2) {
+                    .bodyItems__logo {
+                        background-image: url(../img/pizza-2.jpg);
+                        background-position: -5px
+                    }
+                }
+                .bodyItems:nth-child(3) {
+                    .bodyItems__logo {
+                        background-image: url(../img/pizza-3.jpg);
+                        background-position: -65px
+                    }
+                }
+            }
+        }
     }
 }
