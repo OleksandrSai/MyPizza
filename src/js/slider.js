@@ -12,9 +12,9 @@ document.addEventListener("input", examination)
  function stepSlide() {
     setTimeout(()=> {slide1.checked = true; examination();
         setTimeout(()=> {slide2.checked = true; examination();
-        setTimeout(()=> {slide3.checked = true; examination(); stepSlide()},5000)
-        },5000)
-        },5000)
+        setTimeout(()=> {slide3.checked = true; examination(); stepSlide()},3000)
+        },3000)
+        },3000)
     }
 
  function examination (){

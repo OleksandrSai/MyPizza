@@ -1,0 +1,292 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 500px;
+
+    @include sm-d {
+        justify-content: flex-start;
+    }
+    
+
+    .footer__box {
+        display: flex;
+        max-width: 1920px;
+        justify-content: space-evenly;
+        height: 250px;
+        flex-wrap: wrap;
+
+        @include sm-d {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer__about {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 17px;
+            color: lighten($color, 90%);
+
+            @include sm-d {
+                order: 3;
+                width: 100%;
+                height: 130px;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+
+        .footer__social {
+            display: flex;
+            width: 180px;
+            flex-direction: row;
+            justify-content: space-between;
+            @include sm-d{
+                margin-top: 20px;
+               
+            }
+           
+            
+            .social__block{
+                display: flex;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: lighten($color, 13%);
+                background-image: url(../img/twitter-white.png);
+                background-position: 11px;
+                background-size: 55% 55%;
+                background-repeat: no-repeat;
+                content: "";
+            }
+            .social__block:nth-child(2){
+                background-image: url(../img/facebook_white.png);
+            }
+            .social__block:nth-child(3){
+                background-image: url(../img/instagram_white.png);
+            }
+            
+        }
+
+        .footer__recent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 250px;
+
+            @include sm-d {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .footer__recent__blog {
+                display: flex;
+                width: 370px;
+                justify-content: space-between;
+
+                @include sm-d {
+                    max-width: 370px;
+                }
+
+                @include mm-d {
+                    max-width: 320px;
+                    justify-content: center;
+                }
+
+                .blog__image {
+                    background-image: url(../img/image_2.jpg);
+                    background-size: contain;
+                    width: 80px;
+                    height: 80px;
+                    background-repeat: no-repeat;
+
+                    @include mm-d {
+                        display: none;
+                    }
+                }
+
+                .blog__body {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 70px;
+
+
+                    .blog__body__title {
+                        width: 270px;
+                        font-size: 15px;
+                        color: lighten($color, 90%);
+                        font-weight: 500;
+
+                    }
+
+                    .blog__body__about {
+                        display: flex;
+                        justify-content: flex-start;
+
+                        .blog__body__about__date,
+                        .blog__body__about__user,
+                        .blog__body__about__coments {
+                            margin-left: 18px;
+                            color: lighten($color, 60%);
+                            font-size: 13px;
+                            position: relative;
+                            z-index: 1;
+                        }
+
+                        .blog__body__about__date::before {
+                            content: "";
+                            background-image: url(../img/calendar-icon.png);
+                            background-size: contain;
+                            width: 13px;
+                            height: 13px;
+                            position: absolute;
+                            bottom: 5px;
+                            right: 80px;
+                        }
+
+                        .blog__body__about__user::before {
+                            background-image: url(../img/human-icon-white.png);
+                            content: "";
+                            background-size: contain;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            bottom: 7px;
+                            right: 45px;
+                        }
+
+                        .blog__body__about__coments::before {
+                            background-image: url(../img/message-icon-white.png);
+                            content: "";
+                            background-size: contain;
+                            width: 10px;
+                            height: 10px;
+                            position: absolute;
+                            bottom: 5px;
+                            right: 15px;
+                        }
+                    }
+                }
+            }
+
+            .footer__recent__blog:nth-child(2) {
+                .blog__image {
+                    background-image: url(../img/image_1.jpg);
+                }
+            }
+        }
+
+        .footer__services {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
+
+            @include sm-d {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+                height: 80px;
+            }
+
+            .footer__service__items {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 150px;
+                font-size: 17px;
+                color: lighten($color, 90%);
+
+                @include sm-d {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    width: 100%;
+                }
+            }
+        }
+
+        .footer__questions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 200px;
+
+            @include sm-d {
+                order: 4;
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                padding: 10px;
+                margin-top: 35px;
+            }
+            @include mm-d {
+                margin-top: 80px;
+            }
+            
+
+            .footer__questions__box {
+                margin-left: 25px;
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 150px;
+                font-size: 17px;
+                color: lighten($color, 90%);
+                position: relative;
+                z-index: 1;
+
+            }
+
+            .footer__questions__box::before {
+                background-image: url(../img/location-pin_white.png);
+                content: "";
+                background-size: contain;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                bottom: 130px;
+                right: 209px;
+            }
+
+            .footer__questions__block:nth-child(2)::before {
+                background-image: url(../img/phone_white.png);
+                content: "";
+                background-size: contain;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                bottom: 43px;
+                right: 209px;
+            }
+
+            .footer__questions__block:nth-child(3)::before {
+                background-image: url(../img/envelope_white.png);
+                content: "";
+                background-size: contain;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                bottom: 5px;
+                right: 209px;
+            }
+        }
+
+    }
+}
+
+.footer__title {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+}

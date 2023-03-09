@@ -3,19 +3,21 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 860px;
-    @include lg-d{
-        height: 1200px;
-    
-    }
-    
-    @include sm-d{
+
+    @include lg-d {
         height: 1700px;
+
+    }
+
+    @include sm-d {
+        max-height: 1700px;
     }
 
     .home2__items {
         display: flex;
         height: 85%;
-        @include lg-d{
+
+        @include lg-d {
             height: 100%;
         }
 
@@ -25,7 +27,8 @@
             background-position: -230px;
             background-repeat: no-repeat;
             background-size: cover;
-            @include lg-d{
+
+            @include lg-d {
                 display: none;
                 background-size: 100% 100%;
             }
@@ -36,7 +39,8 @@
             flex-direction: column;
             width: 70%;
             justify-content: space-evenly;
-            @include lg-d{
+
+            @include lg-d {
                 width: 100%;
                 justify-content: flex-start;
             }
@@ -44,7 +48,8 @@
             .item__body__menu {
                 list-style: none;
                 display: flex;
-                @include lg-d{
+
+                @include lg-d {
                     margin-top: 50px;
                     padding: 0px;
                     align-items: center;
@@ -62,20 +67,24 @@
                     justify-content: center;
                     color: lighten($colorGold, 25%);
                     font-weight: 400;
-                    @include lg-d{
+
+                    @include lg-d {
                         margin: 15px;
                         justify-content: space-around;
                     }
                 }
+
                 .item__body__links:nth-child(1) {
                     background-color: darken($colorGold, 1%);
                     color: $color;
                 }
             }
+
             .item__body__items {
                 display: flex;
                 justify-content: space-evenly;
-                @include lg-d{
+
+                @include lg-d {
                     flex-wrap: wrap;
                 }
 
@@ -86,7 +95,7 @@
                     align-items: center;
                     width: 350px;
                     height: 500px;
-                   
+
                     .bodyItems__logo {
                         border-radius: 50%;
                         width: 250px;
@@ -99,16 +108,19 @@
                     .bodyItems__logo {
                         background-image: url(../img/image_3.jpg);
                     }
-                    .bodyItems__title{
+
+                    .bodyItems__title {
                         @include Josefin;
-                        font-size:21px;
+                        font-size: 21px;
                         color: lighten($color, 100%);
                     }
-                    .bodyItems__subtitle{
+
+                    .bodyItems__subtitle {
                         text-align: center;
                         color: lighten($color, 60%);
                     }
-                    .bodyItems__cart{
+
+                    .bodyItems__cart {
                         padding: 7px;
                         color: lighten($color, 100%);
                         border: lighten($color, 100%) 1px solid;
@@ -116,12 +128,14 @@
                         font-weight: 400;
                     }
                 }
+
                 .bodyItems:nth-child(2) {
                     .bodyItems__logo {
                         background-image: url(../img/pizza-2.jpg);
                         background-position: -5px
                     }
                 }
+
                 .bodyItems:nth-child(3) {
                     .bodyItems__logo {
                         background-image: url(../img/pizza-3.jpg);

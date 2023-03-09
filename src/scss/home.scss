@@ -2,11 +2,16 @@
 @import "./mixin/vars";
 @import "./mixin/breakpoints";
 @import "./mixin/font";
+@import "./mixin/color";
+
 
 body{
+   
+    background-color: $color;
+
     @include Popins;
     position: relative;
-    height: 150%;
+   
     @include sm-d{
         background-color: red;
     }
@@ -21,16 +26,19 @@ body{
 
 
 .wrapper{
+        .header{
+            margin: 0 auto;
+            max-width: 1920px;
+            
+        }
+
         overflow: hidden;
         max-width: 1920px;
-        height: 150%;
-        @include sm-d{
-            max-width: 764px;
-        }
+       
         .main{
             margin-top: 80px !important;
             overflow: hidden;
-            margin-bottom: 100px;
+           
         }
     
     }}
@@ -42,3 +50,4 @@ body{
 @import "./module/slider";
 @import "./module/home1";
 @import "./module/home2";
+@import "./module/footer";

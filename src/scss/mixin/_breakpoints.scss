@@ -35,7 +35,7 @@
     }
 }
 @mixin lg-d{
-    @media (max-width: (map-get($breakpoitns, xl) - .2px)){
+    @media (max-width: (map-get($breakpoitns, lg) - .2px)){
         @content;
     }
 }
@@ -50,7 +50,7 @@
     }
 }
 @mixin mm-d{
-    @media (max-width: (map-get($breakpoitns, sm) - .2px)){
+    @media (max-width: (map-get($breakpoitns, mm) - .2px)){
         @content;
     }
 }
