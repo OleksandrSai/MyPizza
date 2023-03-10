@@ -5,12 +5,15 @@
 
     display: flex;
     flex-direction: column;
+
     @include sr-d {
         height: 1100px;
     }
+
     @include md-d {
         height: 1800px;
     }
+
     @include gg-d {
         height: 1800px;
     }
@@ -25,7 +28,6 @@
         font-size: 35px;
         color: lighten($color, 100%);
         text-align: center;
-        margin-top: 80px;
         text-transform: uppercase;
     }
 
@@ -59,7 +61,8 @@
             }
 
             @include sm-d {
-                width: 400px;
+                width: 600px;
+                
 
             }
 
@@ -70,6 +73,9 @@
                 background-size: 160% 110%;
                 background-position: -98px;
                 background-repeat: no-repeat;
+                @include sm-d {
+                    background-size: 160% 100%;
+                }
             }
 
             .menu1__box__about {
@@ -154,15 +160,15 @@
                 background-image: url(../img/pizza-3.jpg);
                 background-size: 130% 105%;
                 background-position: -50px;
-
-                @include sm-d {
-                    background-position: -35px;
-                    background-size: 130% 100%;
-                }
-
                 @include xl-d {
                     background-position: -40px;
                 }
+                @include sm-d {
+                    background-position: -50px;
+                    background-size: 140% 100%;
+                }
+
+                
             }
         }
 
@@ -174,11 +180,12 @@
                 background-position: -25px;
 
                 @include sm-d {
-                    background-position: -15px;
+                    
+                    background-size: 110% 100%;
+                    background-position: -10px;
                 }
-
                 @include xl-d {
-                    background-position: -20px;
+                    
                     order: 1;
                 }
             }
@@ -193,6 +200,9 @@
 
                 @include xl-d {
                     order: 1;
+                }
+                @include sm-d {
+                    background-size: 100% 100%;
                 }
             }
         }
@@ -210,13 +220,10 @@
                 }
 
                 @include sm-d {
-                    background-position: -35px;
-                    background-size: 130% 100%;
+                    background-position: -60px;
+                    background-size: 150% 100%;
                 }
             }
         }
-
-
     }
-
 }

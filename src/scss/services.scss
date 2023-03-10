@@ -3,37 +3,29 @@
 @import "./mixin/font";
 @import "./mixin/color";
 
-
 body {
-
-    background-color: $color;
-
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: lighten($color, 8%);
     @include Popins;
-    position: relative;
-
-    margin: 0px 0px 0px 0px;
-
+    font-size: 18px;
 
     .wrapper {
         .header {
             margin: 0 auto;
             max-width: 1920px;
         }
-
-        .main {
-            margin-top: 80px !important;
-            overflow: hidden;
-
-        }
-
     }
 }
 
+.main {
+    margin-top: 80px !important;
+    background-image: url(../img/food.png);
+    background-repeat: repeat;
+    background-size: 20%;
 
-
+}
 
 @import "./module/header";
-@import "./module/slider";
-@import "./module/home1";
-@import "./module/home2";
+@import "./module/service";
 @import "./module/footer";

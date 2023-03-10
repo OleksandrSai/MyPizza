@@ -15,7 +15,8 @@ module.exports = {
     devtool,
     entry:{
         index: path.resolve(__dirname, "src/entry", "home.js"),
-        home: path.resolve(__dirname, "src/entry", "menu.js")
+        home: path.resolve(__dirname, "src/entry", "menu.js"),
+        services: path.resolve(__dirname, "src/entry", "services.js"),
     },
     output:{
         path: path.resolve(__dirname, "dist"),
@@ -30,6 +31,10 @@ module.exports = {
         filename:"menu.html",
         template:"src/menu.html"
         }),
+        new HtmlWebpackPlugin({
+            filename:"services.html",
+            template:"src/services.html"
+            }),
     
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
