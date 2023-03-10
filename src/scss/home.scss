@@ -12,16 +12,6 @@ body{
     @include Popins;
     position: relative;
    
-    @include sm-d{
-        background-color: red;
-    }
-
-    @include sm-u{
-        background-color: yellow;
-    }
-    @include lg-u{
-        background-color: green;
-    }
     margin:0px 0px 0px 0px;
 
 

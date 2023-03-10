@@ -2,23 +2,22 @@
     margin-top: 80px;
     height: 860px;
     width: 100%;
-    background-image: url(../img/bg_4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
     display: flex;
     flex-direction: column;
-
-    @include xl-d {
-        height: 1200px;
-
+    @include sr-d {
+        height: 1100px;
+    }
+    @include md-d {
+        height: 1800px;
+    }
+    @include gg-d {
+        height: 1800px;
     }
 
-    @include lg-d {
-        height: 1900px;
-    }
 
     @include sm-d {
-        height: 2400px;
+        height: 1900px;
     }
 
     .menu1__title {
@@ -51,7 +50,7 @@
         }
 
         .menu1__box {
-            width: 640px;
+            width: 634px;
             height: 250px;
             display: flex;
 
@@ -61,7 +60,6 @@
 
             @include sm-d {
                 width: 400px;
-           
 
             }
 
@@ -81,35 +79,41 @@
                 width: 100%;
                 height: 100%;
                 order: 1;
-                
-                .about__title{
+
+                .about__title {
                     margin: 25px 25px 5px 25px;
                     font-size: 23px;
                     font-weight: 400;
-                    color: lighten($color,100%);
+                    color: lighten($color, 100%);
                     @include Josefin;
-                    @include sm-d{
-                        margin:5px 0px 10px 15px;
+
+                    @include sm-d {
+                        margin: 5px 0px 10px 15px;
                     }
                 }
-                .about__text{
+
+                .about__text {
                     margin: 5px 25px 5px 25px;
                     font-weight: 200;
-                    color: lighten($color,55%);
-                    @include sm-d{
-                        margin:5px 0px 10px 15px;
-                        
+                    color: lighten($color, 55%);
+
+                    @include sm-d {
+                        margin: 5px 0px 10px 15px;
+
                     }
-                  
+
                 }
-                .about__box{
+
+                .about__box {
                     display: flex;
-                    align-items:flex-start;
-                    .about__price{
+                    align-items: flex-start;
+
+                    .about__price {
                         margin-left: 25px;
-                        color:lighten($colorGold, 5%)
+                        color: lighten($colorGold, 5%)
                     }
-                    .about__button{
+
+                    .about__button {
                         margin-left: 25px;
                         padding: 8px;
                         color: lighten($color, 100%);
@@ -138,6 +142,10 @@
                 background-image: url(../img/pizza-2.jpg);
                 background-size: 100% 110%;
                 background-position: 0px;
+
+                @include sm-d {
+                    background-size: 100% 100%;
+                }
             }
         }
 
@@ -148,7 +156,8 @@
                 background-position: -50px;
 
                 @include sm-d {
-                    background-position: -30px;
+                    background-position: -35px;
+                    background-size: 130% 100%;
                 }
 
                 @include xl-d {
@@ -201,7 +210,8 @@
                 }
 
                 @include sm-d {
-                    background-position: -30px;
+                    background-position: -35px;
+                    background-size: 130% 100%;
                 }
             }
         }

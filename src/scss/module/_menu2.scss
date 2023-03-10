@@ -1,0 +1,127 @@
+.menu2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .menu2__title{
+        text-transform: uppercase;
+        color: lighten($color, 100%);
+        font-weight: 500;
+        font-size: 28px;
+    }
+    .menu2__logotitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 20px;
+        position: relative;
+        margin-bottom: 20px;
+
+        .menu2__logotitle__block{
+            width: 12px;
+            height: 12px;
+            background-color: $colorGold;
+            transform: rotateZ(45deg);
+            position: relative;
+            right: 15px
+        }
+        .menu2__logotitle__block::before{
+            content: "";
+            width: 6px;
+            bottom: -10px;
+            height: 6px;
+            background-color: $colorGold;
+            position: absolute;
+            right: 15px;
+        }
+        .menu2__logotitle__block::after{
+            content: "";
+            width: 6px;
+            bottom: 15px;
+            height: 6px;
+            background-color: $colorGold;
+            position: absolute;
+            left: 16px;
+        }        
+        .menu2__logotitle__line{
+            width: 35px;
+            height: 1px;
+            background-color: $colorGold;
+            position: absolute;
+        }
+        .menu2__logotitle__line:nth-child(1){
+            height: 1px;
+            right: 165px;
+        }
+        .menu2__logotitle__line:nth-child(2){
+            height: 1px;
+            left: 135px;
+        }
+    }
+    .menu2__subtitle{
+        color: lighten($color, 55%);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 700px;
+        margin-bottom: 50px;
+    }
+    .menu2__box{
+        display: flex;
+        width: 25%;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+         @include sm-d{
+            width: 100%;
+                flex-wrap: wrap;
+                align-items: none;
+                justify-content: stretch;
+                
+            }
+        .menu2__box__row{
+            margin-bottom: 20px;
+            width: 650px;
+            display: flex;
+            height: 100%;
+            @include sm-d{
+                width: 100%;
+            }
+            img{
+               width: 80px;
+               height: 80px;
+               border-radius: 50%;
+               object-fit: cover;
+               
+            }
+            
+            .rowItems__box{
+                margin-left: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .rowItems_box__row1{
+                    display: flex;
+                    justify-content: space-between;
+                    .rowItems__box__name{
+                        color:lighten($color, 80%);
+                        font-size: 18px;
+                        @include Josefin;
+                    
+                    }
+                    .rowItems__box__price{
+                        color: $colorGold;
+                    }
+                }
+                .rowItems_box__row2{
+                    .rowItems__box__about{
+                        color:lighten($color,65%)
+                    }
+                }
+            }
+            
+        }
+    }
+
+}

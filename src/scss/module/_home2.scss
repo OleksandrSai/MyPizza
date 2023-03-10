@@ -3,15 +3,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 860px;
-
-    @include lg-d {
-        height: 1700px;
-
-    }
-
     @include sm-d {
         max-height: 1700px;
     }
+    @include lg-d {
+        height: 1300px;
+
+    }
+    @include md-d {
+        height: 1800px;
+
+    }
+
+  
 
     .home2__items {
         display: flex;
