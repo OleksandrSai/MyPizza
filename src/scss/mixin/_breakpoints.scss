@@ -29,11 +29,14 @@
         @content;
     }
 }
-@mixin xl {
-    @media (min-width:map-get($breakpoitns,lg)) {
+
+
+@mixin xl-d {
+    @media (max-width: (map-get($breakpoitns, xl) - .2px)){
         @content;
     }
 }
+
 @mixin lg-d{
     @media (max-width: (map-get($breakpoitns, lg) - .2px)){
         @content;

@@ -1,0 +1,212 @@
+.menu1 {
+    margin-top: 80px;
+    height: 860px;
+    width: 100%;
+    background-image: url(../img/bg_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    @include xl-d {
+        height: 1200px;
+
+    }
+
+    @include lg-d {
+        height: 1900px;
+    }
+
+    @include sm-d {
+        height: 2400px;
+    }
+
+    .menu1__title {
+        @include Josefin;
+        font-size: 35px;
+        color: lighten($color, 100%);
+        text-align: center;
+        margin-top: 80px;
+        text-transform: uppercase;
+    }
+
+    .menu1__subtitle {
+        color: lighten($color, 55%);
+        text-align: center;
+        margin: 0 auto;
+        max-width: 700px;
+
+    }
+
+    .menu1__body {
+        margin-top: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include xl-d {
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .menu1__box {
+            width: 640px;
+            height: 250px;
+            display: flex;
+
+            @include xl-d {
+                width: 480px;
+            }
+
+            @include sm-d {
+                width: 400px;
+           
+
+            }
+
+            .menu1__box__logo {
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/image_3.jpg);
+                background-size: 160% 110%;
+                background-position: -98px;
+                background-repeat: no-repeat;
+            }
+
+            .menu1__box__about {
+                background-color: rgba($color: #000000, $alpha: 0.3);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: 100%;
+                height: 100%;
+                order: 1;
+                
+                .about__title{
+                    margin: 25px 25px 5px 25px;
+                    font-size: 23px;
+                    font-weight: 400;
+                    color: lighten($color,100%);
+                    @include Josefin;
+                    @include sm-d{
+                        margin:5px 0px 10px 15px;
+                    }
+                }
+                .about__text{
+                    margin: 5px 25px 5px 25px;
+                    font-weight: 200;
+                    color: lighten($color,55%);
+                    @include sm-d{
+                        margin:5px 0px 10px 15px;
+                        
+                    }
+                  
+                }
+                .about__box{
+                    display: flex;
+                    align-items:flex-start;
+                    .about__price{
+                        margin-left: 25px;
+                        color:lighten($colorGold, 5%)
+                    }
+                    .about__button{
+                        margin-left: 25px;
+                        padding: 8px;
+                        color: lighten($color, 100%);
+                        border: lighten($color, 100%) 1px solid;
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .menu1__box:nth-child(1) {
+            .menu1__box__logo {
+                @include xl-d {
+                    background-position: -70px;
+                }
+
+                @include sm-d {
+                    background-position: -60px;
+                }
+            }
+        }
+
+        .menu1__box:nth-child(2) {
+            .menu1__box__logo {
+                background-image: url(../img/pizza-2.jpg);
+                background-size: 100% 110%;
+                background-position: 0px;
+            }
+        }
+
+        .menu1__box:nth-child(3) {
+            .menu1__box__logo {
+                background-image: url(../img/pizza-3.jpg);
+                background-size: 130% 105%;
+                background-position: -50px;
+
+                @include sm-d {
+                    background-position: -30px;
+                }
+
+                @include xl-d {
+                    background-position: -40px;
+                }
+            }
+        }
+
+        .menu1__box:nth-child(4) {
+            .menu1__box__logo {
+                order: 2;
+                background-image: url(../img/pizza-4.jpg);
+                background-size: 120% 120%;
+                background-position: -25px;
+
+                @include sm-d {
+                    background-position: -15px;
+                }
+
+                @include xl-d {
+                    background-position: -20px;
+                    order: 1;
+                }
+            }
+        }
+
+        .menu1__box:nth-child(5) {
+            .menu1__box__logo {
+                order: 2;
+                background-image: url(../img/pizza-5.jpg);
+                background-size: 100% 115%;
+                background-position: 5px;
+
+                @include xl-d {
+                    order: 1;
+                }
+            }
+        }
+
+        .menu1__box:nth-child(6) {
+            .menu1__box__logo {
+                order: 2;
+                background-image: url(../img/pizza-6.jpg);
+                background-size: 130% 100%;
+                background-position: -60px;
+
+                @include xl-d {
+                    background-position: -40px;
+                    order: 1;
+                }
+
+                @include sm-d {
+                    background-position: -30px;
+                }
+            }
+        }
+
+
+    }
+
+}
