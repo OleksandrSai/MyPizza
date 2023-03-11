@@ -93,7 +93,6 @@
             background-image: url(../img/pizza1_orange.png);
             background-size: contain;
             background-repeat: no-repeat;
-            background-position: 5;
             width: 23px;
             height: 23px;
             bottom: 6px;
@@ -106,7 +105,8 @@
         .logo__subtitle {
             font-size: 13px;
             @include Josefin;
-            color: $colorGold
+            color: $colorGold;
+            text-transform: uppercase;
         }
     }
 

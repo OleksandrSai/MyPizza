@@ -14,10 +14,10 @@
         z-index: 2;
         display: flex;
         align-items: center;
-        left: 50%;
+        left: 47%;
 
         @include sm-d {
-            left: 42.5%;
+            left: 40.5%;
         }
 
         input[type='radio'],
@@ -210,8 +210,6 @@
                 }
             }
         }
-
-
         //второй слайд
         .slide2 {
             background-image: linear-gradient(rgba(31, 28, 17, 0.205), rgba(0, 0, 0, 0.8)), url(../img/bg_1.jpg);
@@ -262,8 +260,6 @@
                             margin-left: -35px;
                             width: 225px;
                         }
-
-
                     }
                 }
 
@@ -428,6 +424,4 @@
             }
         }
     }
-
-
 }

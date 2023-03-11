@@ -18,15 +18,15 @@ body {
     }
 }
 
-.mainMenu {
+.mainBlog {
     margin-top: 80px !important;
-    overflow: hidden;
     background-image: url(../img/bg_4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
+
 }
 
 @import "./module/header";
-@import "./module/menu1";
-@import "./module/menu2";
+@import "./module/blog";
 @import "./module/footer";

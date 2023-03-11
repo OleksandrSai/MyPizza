@@ -1,0 +1,108 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+
+    .blog__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: lighten($color, 100%);
+        font-weight: 400;
+        font-size: 35px;
+    }
+
+    .blog__subtitle {
+        color: lighten($color, 55%);
+        width: 650px;
+        text-align: center;
+        margin-bottom: 50px;
+        @include xm-d{
+            width: 100%;
+        }
+    }
+
+    .blog__box {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+  
+        @include xm-d{
+            flex-wrap: wrap;
+            width: 100%;
+        }
+      
+        .blog__box__block {
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+            justify-content: space-evenly;
+            width: 430px;
+            margin-bottom: 90px;
+
+            @include sm-d {
+                width: 355px;
+            }
+
+
+            .blog__box__block__img {
+                width: 100%;
+                height: 300px;
+                background-image: url(../img/image_1.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        .blog__box__block:nth-child(2) {
+            .blog__box__block__img {
+                background-image: url(../img/image_2.jpg);
+            }
+        }
+
+        .blog__box__block:nth-child(3) {
+            .blog__box__block__img {
+                background-image: url(../img/image_3.jpg);
+            }
+        }
+
+        .blog__box__block__publicate {
+            display: flex;
+            color: lighten($color, 55%);
+
+            .publicate__date {
+                margin-right: 8px;
+            }
+
+            .publicate__coments {
+                position: relative;
+                margin-left: 30px;
+            }
+
+            .publicate__coments::before {
+                position: absolute;
+                content: "";
+                width: 13px;
+                height: 13px;
+                bottom: 6px;
+                right: 20px;
+                background-image: url(../img/message-icon-white.png);
+                background-size: cover;
+
+            }
+        }
+
+        .blog__box__block__title {
+            @include Josefin;
+            color: lighten($color, 90%);
+            font-size: 22px;
+        }
+
+        .blog__box__block__body {
+            color: lighten($color, 55%)
+        }
+
+    }
+}

@@ -52,18 +52,12 @@
         }
 
         .menu1__box {
-            width: 634px;
+            width: 639px;
             height: 250px;
             display: flex;
 
             @include xl-d {
                 width: 480px;
-            }
-
-            @include sm-d {
-                width: 600px;
-                
-
             }
 
             .menu1__box__logo {
