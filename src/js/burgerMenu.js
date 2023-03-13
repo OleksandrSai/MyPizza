@@ -12,13 +12,9 @@ function colorMenu(){
        
         let path = window.location.pathname
         if(path == "/" && el.textContent == "Home" ) el.style.color = "gold";
-        if(`/${el.textContent.toLowerCase()}.html` == path) {
+        if(`/MyPizza/${el.textContent.toLowerCase()}.html` == path) {
             el.style.color = "gold";
-            console.log(path)
         }
-        
-        console.log(path, el.textContent)
-       
     })
 }
 
