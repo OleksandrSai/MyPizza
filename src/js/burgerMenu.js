@@ -11,10 +11,11 @@ function colorMenu(){
     document.querySelectorAll("a").forEach(el=> {
        
         let path = window.location.pathname
-        if(path == "/MyPizza/" || path == "/MyPizza/index.html" && el.textContent == "Home" ) el.style.color = "gold";
+        if(path == "/MyPizza/" && el.textContent == "Home" ) el.style.color = "gold";
         if(`/MyPizza/${el.textContent.toLowerCase()}.html` == path) {
             el.style.color = "gold";
         }
+        console.log(path)
     })
 }
 
