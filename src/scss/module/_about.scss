@@ -1,0 +1,224 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    min-width: 360px;
+
+    .about__contact {
+        display: flex;
+        width: 100%;
+
+        @include lg-d {
+            flex-direction: column;
+        }
+
+        .about__contact__adress {
+            display: flex;
+            width: 80%;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: $color;
+
+            @include lg-d {
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            @include sm-d {
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .adress__box {
+                margin-left: 5%;
+                display: flex;
+                flex-direction: column;
+                height: 100px;
+                width: 360px;
+                gap: 10px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                @include sm-d {
+                    width: 200px;
+
+                }
+
+                .contact__title {
+                    position: relative;
+                    color: lighten($color, 100%);
+                    font-weight: 400;
+                }
+
+                .contact__title::before {
+                    background-image: url(../img/phone_orange.png);
+                    background-size: contain;
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: -40px;
+                    bottom: 5px;
+                    content: " ";
+                }
+
+                .contact__subtitle {
+                    color: lighten($color, 55%);
+                    max-width: 250px;
+
+                    @include gg-d {
+                        width: 180px;
+                    }
+                }
+            }
+
+            .adress__box:nth-child(2) {
+                .contact__title::before {
+                    background-image: url(../img/gps_orange.png);
+                }
+            }
+
+            .adress__box:nth-child(3) {
+                .contact__title::before {
+                    background-image: url(../img/time_orange.png);
+                }
+            }
+        }
+
+        .about__contact__soc {
+            width: 20%;
+            background-color: lighten($colorGold, 18%);
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+
+            @include xm-d {
+                width: 20%;
+                padding-left: 20px;
+            }
+
+            @include sl-d {
+                padding-left: 5px;
+            }
+
+            @include lg-d {
+                width: 100%;
+                padding-left: 0%;
+                justify-content: space-around;
+                height: 80px;
+
+            }
+
+            @include sm-d {
+                padding-left: 0px;
+
+            }
+
+            .soc__bloc {
+                width: 25px;
+                height: 25px;
+                margin-left: 25px;
+
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .about__body {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        @include lg-d {
+            flex-wrap: wrap;
+
+        }
+
+        .about__body__logo {
+            width: 50%;
+            background-image: url(../img/about.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            @include lg-d {
+                height: 300px;
+                width: 100%;
+
+            }
+        }
+
+        .about__body__info {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            background-image: url(../img/bg_4.jpg);
+            padding: 4%;
+
+            @include sl-d {
+                width: 60%;
+            }
+
+            @include xl-d {
+                width: 100%;
+
+            }
+
+            .info__title {
+                display: flex;
+                justify-content: start;
+                align-items: flex-start;
+
+                @include sm-d {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .info__title__part {
+                    color: lighten($color, 100%);
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    @include Josefin;
+                    position: relative;
+                    font-size: 25px;
+                }
+
+                .info__title__part:nth-child(1)::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url(../img/pizza_orange.png);
+                    width: 30px;
+                    height: 30px;
+                    bottom: 3px;
+                    right: -40px;
+                    background-size: contain;
+                }
+
+                .info__title__part:nth-child(2) {
+                    margin-left: 125px;
+                }
+
+                .info__title__part:nth-child(2)::before {
+                    position: absolute;
+                    content: "Pizza";
+                    left: -85px;
+                    color: $colorGold;
+                }
+            }
+
+            .info__text {
+                display: flex;
+                max-width: 800px;
+                color: lighten($color, 55%);
+
+                @include xl-d {
+                    justify-content: center;
+
+                }
+            }
+
+        }
+    }
+}

@@ -9,6 +9,11 @@
         @content;
     }
 }
+@mixin sl-d{
+    @media (max-width: (map-get($breakpoitns, sl) - .2px)){
+        @content;
+    }
+}
 @mixin sr-d{
     @media (max-width: (map-get($breakpoitns, sr) - .2px)){
         @content;

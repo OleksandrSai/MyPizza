@@ -19,15 +19,10 @@ body {
     }
 }
 
-.mainBlog {
+.mainAbout {
     margin-top: 80px !important;
-    background-image: url(../img/bg_4.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-
 }
 
 @import "./module/header";
-@import "./module/blog";
+@import "./module/about";
 @import "./module/footer";

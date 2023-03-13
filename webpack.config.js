@@ -18,6 +18,8 @@ module.exports = {
         home: path.resolve(__dirname, "src/entry", "menu.js"),
         services: path.resolve(__dirname, "src/entry", "services.js"),
         blog: path.resolve(__dirname, "src/entry", "blog.js"),
+        about: path.resolve(__dirname, "src/entry", "about.js"),
+
     },
     output:{
         path: path.resolve(__dirname, "dist"),
@@ -40,6 +42,10 @@ module.exports = {
                 filename:"blog.html",
                 template:"src/blog.html"
                 }),
+                new HtmlWebpackPlugin({
+                    filename:"about.html",
+                    template:"src/about.html"
+                    }),
     
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",

@@ -9,6 +9,7 @@ body {
     background-color: lighten($color, 8%);
     @include Popins;
     font-size: 18px;
+    min-width: 360px;
 
     .wrapper {
         .header {
