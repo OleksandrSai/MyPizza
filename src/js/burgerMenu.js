@@ -8,12 +8,13 @@ burgerButton.addEventListener("click", ()=>{
     headerMenu.classList.toggle("activeMenu")
 })
 function colorMenu(){
-    document.querySelectorAll("a").forEach((el,id)=> {
+    document.querySelectorAll("a").forEach(el=> {
        
         let path = window.location.pathname
         if(path == "/" && el.textContent == "Home" ) el.style.color = "gold";
         if(`/${el.textContent.toLowerCase()}.html` == path) {
             el.style.color = "gold";
+            console.log(path)
         }
         
         console.log(path, el.textContent)
