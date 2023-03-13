@@ -1,0 +1,33 @@
+@import "./mixin/vars";
+@import "./mixin/breakpoints";
+@import "./mixin/font";
+@import "./mixin/color";
+
+body {
+    margin: 0 auto;
+    max-width: 1920px;
+    background-color: lighten($color, 8%);
+    @include Popins;
+    font-size: 18px;
+    min-width: 360px;
+    
+
+    .wrapper {
+        .header {
+            margin: 0 auto;
+            max-width: 1920px;
+        }
+    }
+}
+
+.mainContact {
+ 
+    margin-top: 80px !important;
+ 
+    
+
+}
+
+@import "./module/header";
+@import "./module/contact";
+@import "./module/footer";
