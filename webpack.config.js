@@ -22,7 +22,7 @@ module.exports = {
         contact: path.resolve(__dirname, "src/entry", "contact.js")
     },
     output:{
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         clean:true,
         filename: "index.[contenthash].js",
         assetModuleFilename: "assets/[hash][ext]"
