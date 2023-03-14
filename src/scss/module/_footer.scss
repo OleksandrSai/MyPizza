@@ -5,12 +5,11 @@
     align-items: center;
     margin-top: 50px;
 
-    
     .footer__box {
+        order: 1;
         display: flex;
         width: 80%;
         justify-content: space-evenly;
-        height: 250px;
         flex-wrap: wrap;
         gap: 10px;
 
@@ -27,10 +26,12 @@
             justify-content: space-between;
             font-size: 17px;
             color: lighten($color, 90%);
-            gap:10px;
-            @include gg-d{
-                order:3
+            gap: 10px;
+
+            @include gg-d {
+                order: 3
             }
+
             @include sm-d {
                 order: 4;
                 width: 100%;
@@ -39,7 +40,10 @@
                 text-align: center;
                 padding: 10px;
             }
-           
+            .footer__about__body{
+                cursor: pointer;
+            }
+
         }
 
         .footer__social {
@@ -48,7 +52,7 @@
             flex-direction: row;
             justify-content: space-between;
 
-            .social__block{
+            .social__block {
                 display: flex;
                 width: 50px;
                 height: 50px;
@@ -59,14 +63,17 @@
                 background-size: 55% 55%;
                 background-repeat: no-repeat;
                 content: "";
+                cursor: pointer;
             }
-            .social__block:nth-child(2){
+
+            .social__block:nth-child(2) {
                 background-image: url(../img/facebook_white.png);
             }
-            .social__block:nth-child(3){
+
+            .social__block:nth-child(3) {
                 background-image: url(../img/instagram_white.png);
             }
-            
+
         }
 
         .footer__recent {
@@ -87,7 +94,8 @@
                 width: 360px;
                 justify-content: space-between;
                 flex-direction: row;
-            
+                cursor: pointer;
+
                 @include sm-d {
                     max-width: 370px;
                 }
@@ -103,7 +111,7 @@
                     width: 80px;
                     height: 80px;
                     background-repeat: no-repeat;
-                    
+
 
                     @include mm-d {
                         display: none;
@@ -202,6 +210,7 @@
                 height: 150px;
                 font-size: 17px;
                 color: lighten($color, 90%);
+                cursor: pointer;
 
                 @include sm-d {
                     width: 100%;
@@ -215,17 +224,14 @@
             justify-content: space-between;
             height: 200px;
 
+
             @include sm-d {
                 order: 3;
                 width: 100%;
                 align-items: center;
                 text-align: center;
                 padding: 10px;
-               
             }
-         
-         
-            
             .footer__questions__box {
                 margin-left: 25px;
                 width: 200px;
@@ -274,6 +280,21 @@
             }
         }
 
+    }
+
+    .footer__copyright {
+        order: 2;
+        display: flex;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        color: lighten($color, 100%);
+        font-size: 15px;
+
+        @include sm-d {
+            margin-top: 5px;
+        }
     }
 }
 

@@ -5,12 +5,9 @@
 
 
 body {
-
     background-color: $color;
-
     @include Popins;
     position: relative;
-
     margin: 0px 0px 0px 0px;
     min-width: 360px;
 
@@ -21,7 +18,7 @@ body {
             max-width: 1920px;
         }
 
-        .main {
+        .mainHome {
             margin-top: 80px !important;
             overflow: hidden;
 

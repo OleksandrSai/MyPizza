@@ -101,6 +101,7 @@
             justify-content: space-evenly;
 
             @include sm-d {
+                background-size:140% 100%;
                 width: 764px;
             }
 
@@ -222,6 +223,7 @@
             justify-content: space-evenly;
 
             @include sm-d {
+                background-size:140% 100%;
                 width: 764px;
             }
 
@@ -341,16 +343,19 @@
         .slide3 {
             background-image: linear-gradient(rgba(31, 28, 17, 0.205), rgba(0, 0, 0, 0.8)), url(../img/bg_3.jpg);
             width: 1920px;
-            background-size: 100% 100%;
+            background-size:100% 100%;
             background-repeat: no-repeat;
             background-position: 0 0;
+            background-attachment: unset;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
 
             @include sm-d {
+                background-size:140% 100%;
                 width: 764px;
             }
+           
 
             .slide__body {
                 display: flex;

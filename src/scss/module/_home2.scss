@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 860px;
+    position: relative;
   
     @include lg-d {
         height: 1300px;
@@ -70,6 +71,7 @@
                     justify-content: center;
                     color: lighten($colorGold, 25%);
                     font-weight: 400;
+                    cursor: pointer;
 
                     @include lg-d {
                         margin: 15px;
@@ -129,6 +131,7 @@
                         border: lighten($color, 100%) 1px solid;
                         font-size: 13px;
                         font-weight: 400;
+                        cursor: pointer;
                     }
                 }
 

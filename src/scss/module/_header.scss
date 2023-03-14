@@ -73,6 +73,7 @@
         color: lighten($color, 80%);
         justify-content: center;
         font-size: 11px;
+        cursor: pointer;
 
         @include sm-d {
             margin-right: 20px;
